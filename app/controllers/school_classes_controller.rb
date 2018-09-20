@@ -5,6 +5,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def new
+    @class = SchoolClass.find(params[:id])
   end
 
   def create
@@ -23,7 +24,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def show
-    @class
+    @class = SchoolClass.find(params[:id])
   end
 
   private
