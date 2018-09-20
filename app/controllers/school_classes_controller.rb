@@ -9,7 +9,7 @@ class SchoolClassesController < ApplicationController
 
   def create
     @class = SchoolClass.create(class_params(:title, :room_number))
-    redirect to class_path(@class)
+    redirect to school_class_path(@class)
   end
 
   def edit
@@ -19,7 +19,7 @@ class SchoolClassesController < ApplicationController
   def update
     set_class
     @class.update(class_params(:title, :room_number))
-    redirect_to class_path(@class)
+    redirect_to school_class_path(@class)
   end
 
   def show
