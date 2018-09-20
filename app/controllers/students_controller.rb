@@ -8,7 +8,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student= Student.create(student_params(:title, :room_number))
+    @student= Student.create(student_params(:first_name, :last_name))
     redirect to student_path(@student)
   end
 
@@ -18,7 +18,7 @@ class StudentsController < ApplicationController
 
   def update
     set_student
-    @student.update(student_params(:title, :room_number))
+    @student.update(student_params(:first_name, :last_name))
     redirect_to student_path(@student
   end
 
