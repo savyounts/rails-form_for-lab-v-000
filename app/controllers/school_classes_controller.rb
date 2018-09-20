@@ -23,7 +23,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def show
-    set_class
+    @class
   end
 
   private
